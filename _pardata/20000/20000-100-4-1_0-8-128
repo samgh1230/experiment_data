@@ -1,0 +1,15 @@
+4         Threads
+100       Connections per thread
+20000     Requests per thread
+Type        Ops/sec     Hits/sec   Misses/sec      Latency       KB/sec
+------------------------------------------------------------------------
+Sets     1032683.26          ---          ---      3.08600    177380.80
+Gets           0.00         0.00         0.00      0.00000         0.00
+Totals   1032683.26         0.00         0.00      3.08600    177380.80
+
+
+Request Latency Distribution
+Type     <= msec         Percent
+------------------------------------------------------------------------
+SET        -nan       100.00
+---
