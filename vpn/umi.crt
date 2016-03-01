@@ -1,0 +1,95 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=MI, L=Ann Arbor, O=umi, OU=umi, CN=vpnumi/name=vpnumi/emailAddress=umi@umi.com
+        Validity
+            Not Before: Mar  1 19:56:09 2016 GMT
+            Not After : Feb 27 19:56:09 2026 GMT
+        Subject: C=US, ST=MI, L=Ann Arbor, O=umi, OU=umi, CN=umi/name=vpnumi/emailAddress=umi@umi.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ba:6b:2f:18:75:6b:96:e8:a9:57:09:e4:c2:45:
+                    6b:06:29:47:9d:76:12:2b:91:c0:55:5f:2c:d9:46:
+                    d9:a1:50:aa:f0:cb:09:55:c3:cf:1f:86:86:57:7c:
+                    cb:2b:c3:98:75:03:38:70:56:fa:7d:57:ec:21:96:
+                    93:f7:8c:4c:e9:9b:23:c0:fb:77:b4:d7:39:ca:e3:
+                    a7:cd:57:8f:4c:4e:fe:02:97:b3:3e:e0:74:42:fe:
+                    ca:bd:86:86:f8:cf:a3:2d:4c:cb:1f:1e:8b:fa:ab:
+                    df:ca:b6:2f:52:b6:4c:81:7d:f2:36:ed:1f:5f:b7:
+                    62:53:55:8d:c5:ee:e3:59:62:0d:7c:73:4c:0e:cd:
+                    81:bb:34:8b:1e:98:07:70:8c:c9:79:3a:7f:bb:9f:
+                    56:8f:67:da:5e:16:ce:fb:ca:fe:8b:3e:c8:65:6b:
+                    89:19:3b:89:3e:3f:14:83:f9:66:2e:e5:68:a3:d6:
+                    5d:98:49:fa:92:6f:21:70:b9:41:be:92:fe:90:67:
+                    f6:ba:1b:4e:c3:01:0e:e0:e2:a5:1c:ae:c6:af:5d:
+                    4d:b1:0d:4b:81:b6:db:b6:08:52:2e:6a:db:3e:80:
+                    0b:18:f1:2a:69:f3:ee:28:e8:95:ac:87:9b:d2:50:
+                    18:f6:b0:da:77:59:86:f9:51:5a:d2:96:ec:03:d2:
+                    d2:31
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                E6:4A:C7:B9:86:69:A0:77:15:2F:2A:32:A7:48:4B:57:B3:9A:73:6F
+            X509v3 Authority Key Identifier: 
+                keyid:2C:CA:6A:F7:3F:90:BF:DF:60:C2:44:7A:54:01:6F:33:9F:EC:DC:45
+                DirName:/C=US/ST=MI/L=Ann Arbor/O=umi/OU=umi/CN=vpnumi/name=vpnumi/emailAddress=umi@umi.com
+                serial:EF:08:20:D9:45:B7:BF:7F
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+            X509v3 Subject Alternative Name: 
+                DNS:umi
+    Signature Algorithm: sha256WithRSAEncryption
+         2a:9f:56:b1:d9:d1:70:4c:b1:57:fe:c8:03:21:ac:f2:62:5b:
+         5f:12:f7:b1:25:6e:60:f9:d1:5d:82:59:a3:14:da:0b:6a:76:
+         1a:f2:5c:b1:41:47:8b:09:2b:c8:a7:fb:a6:62:a1:0c:0a:7f:
+         f9:06:51:28:25:39:f8:e8:3f:79:e4:a8:62:2c:1f:0f:f9:b4:
+         50:5f:b8:a3:7b:e3:a7:29:b3:d0:95:a0:5c:6e:63:7f:f0:1a:
+         28:e1:b4:93:75:6b:92:e5:c0:ca:0c:5f:f5:59:17:ac:f0:04:
+         53:69:83:71:42:c7:af:ab:e6:4d:9b:d2:05:89:c3:f5:35:2a:
+         ed:ef:3c:9c:de:fe:fa:c5:8b:c9:04:4a:f1:ce:81:ff:1a:12:
+         f6:bf:6b:ec:1a:b4:ba:90:f5:45:ed:e7:5f:d9:bd:9e:24:64:
+         d6:d5:ab:c1:58:9b:7e:b7:d2:0f:23:ca:de:9f:85:7b:08:95:
+         26:6a:da:00:bb:a6:ab:42:32:3b:87:36:25:03:a8:89:34:d6:
+         a0:86:0c:19:02:c8:91:10:18:27:da:6a:70:52:b3:ca:0d:af:
+         11:03:83:6f:f9:fa:22:36:5a:2a:7b:6c:a3:07:13:f5:b8:33:
+         8a:89:c2:fc:33:00:4f:8f:e2:4d:c2:57:81:b8:34:1b:7a:7f:
+         33:39:b0:00
+-----BEGIN CERTIFICATE-----
+MIIE2zCCA8OgAwIBAgIBAjANBgkqhkiG9w0BAQsFADCBiDELMAkGA1UEBhMCVVMx
+CzAJBgNVBAgTAk1JMRIwEAYDVQQHEwlBbm4gQXJib3IxDDAKBgNVBAoTA3VtaTEM
+MAoGA1UECxMDdW1pMQ8wDQYDVQQDEwZ2cG51bWkxDzANBgNVBCkTBnZwbnVtaTEa
+MBgGCSqGSIb3DQEJARYLdW1pQHVtaS5jb20wHhcNMTYwMzAxMTk1NjA5WhcNMjYw
+MjI3MTk1NjA5WjCBhTELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAk1JMRIwEAYDVQQH
+EwlBbm4gQXJib3IxDDAKBgNVBAoTA3VtaTEMMAoGA1UECxMDdW1pMQwwCgYDVQQD
+EwN1bWkxDzANBgNVBCkTBnZwbnVtaTEaMBgGCSqGSIb3DQEJARYLdW1pQHVtaS5j
+b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6ay8YdWuW6KlXCeTC
+RWsGKUeddhIrkcBVXyzZRtmhUKrwywlVw88fhoZXfMsrw5h1AzhwVvp9V+whlpP3
+jEzpmyPA+3e01znK46fNV49MTv4Cl7M+4HRC/sq9hob4z6MtTMsfHov6q9/Kti9S
+tkyBffI27R9ft2JTVY3F7uNZYg18c0wOzYG7NIsemAdwjMl5On+7n1aPZ9peFs77
+yv6LPshla4kZO4k+PxSD+WYu5Wij1l2YSfqSbyFwuUG+kv6QZ/a6G07DAQ7g4qUc
+rsavXU2xDUuBttu2CFIuats+gAsY8Spp8+4o6JWsh5vSUBj2sNp3WYb5UVrSluwD
+0tIxAgMBAAGjggFPMIIBSzAJBgNVHRMEAjAAMC0GCWCGSAGG+EIBDQQgFh5FYXN5
+LVJTQSBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFOZKx7mGaaB3FS8q
+MqdIS1ezmnNvMIG9BgNVHSMEgbUwgbKAFCzKavc/kL/fYMJEelQBbzOf7NxFoYGO
+pIGLMIGIMQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBB
+cmJvcjEMMAoGA1UEChMDdW1pMQwwCgYDVQQLEwN1bWkxDzANBgNVBAMTBnZwbnVt
+aTEPMA0GA1UEKRMGdnBudW1pMRowGAYJKoZIhvcNAQkBFgt1bWlAdW1pLmNvbYIJ
+AO8IINlFt79/MBMGA1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDAOBgNV
+HREEBzAFggN1bWkwDQYJKoZIhvcNAQELBQADggEBACqfVrHZ0XBMsVf+yAMhrPJi
+W18S97ElbmD50V2CWaMU2gtqdhryXLFBR4sJK8in+6ZioQwKf/kGUSglOfjoP3nk
+qGIsHw/5tFBfuKN746cps9CVoFxuY3/wGijhtJN1a5LlwMoMX/VZF6zwBFNpg3FC
+x6+r5k2b0gWJw/U1Ku3vPJze/vrFi8kESvHOgf8aEva/a+watLqQ9UXt51/ZvZ4k
+ZNbVq8FYm3630g8jyt6fhXsIlSZq2gC7pqtCMjuHNiUDqIk01qCGDBkCyJEQGCfa
+anBSs8oNrxEDg2/5+iI2Wip7bKMHE/W4M4qJwvwzAE+P4k3CV4G4NBt6fzM5sAA=
+-----END CERTIFICATE-----
