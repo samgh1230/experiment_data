@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>TABARNAC visualization</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>TABARNAC visualization</h1>
+
+<p><a href="http://dbeniamine.github.io/Tabarnac/">TABARNAC: Tools for Analyzing the Behavior of Applications Running on Numa
+ArChitectures</a> provides several visualisations of memory traces and gives you
+hints to improve your applications&#39; memory behavior.</p>
+
+<p>For hints on NUMA optimization see <a href="./advices.html">General Advices</a></p>
+
+<pre><code>## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+## logical.return = TRUE, : there is no package called &#39;ggplot2&#39;
+</code></pre>
+
+<pre><code>## Installing package into &#39;/usr/local/lib/R/site-library&#39;
+## (as &#39;lib&#39; is unspecified)
+</code></pre>
+
+<pre><code>## system (cmd0): /usr/lib/R/bin/R CMD INSTALL
+</code></pre>
+
+<pre><code>## Warning: package &#39;ggplot2&#39; is not available (for R version 3.0.2)
+</code></pre>
+
+<pre><code>## Error in library(name, character.only = T): there is no package called &#39;ggplot2&#39;
+</code></pre>
+
+<pre><code>## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+## logical.return = TRUE, : there is no package called &#39;plyr&#39;
+</code></pre>
+
+<pre><code>## Installing package into &#39;/usr/local/lib/R/site-library&#39;
+## (as &#39;lib&#39; is unspecified)
+## system (cmd0): /usr/lib/R/bin/R CMD INSTALL
+</code></pre>
+
+<pre><code>## Warning: package &#39;plyr&#39; is not available (for R version 3.0.2)
+</code></pre>
+
+<pre><code>## Error in library(name, character.only = T): there is no package called &#39;plyr&#39;
+</code></pre>
+
+<p><em>Note:</em></p>
+
+<ul>
+<li>If there are any warning/error from R before this text, R might have failed
+&hellip; If it is the first run of TABARNAC it might be the dependencies
+installation, running <code>tabarnac -p expname</code> (where <code>expname</code> is the name of the
+application you&#39;ve just traced) should remove them.</li>
+<li>Tabarnac creates several cache files during the visualization generation, if
+it does not seem to regenerate correctly a visualization when you ask, run
+<code>tabarnac -C -p expname</code> to regenerate the visualization without using the
+cache files.
+You can also remove them manually:
+<code>rm expname.acc.csv expname.structsStats.csv expname.structsModified.csv</code></li>
+</ul>
+
+<h2>Topology</h2>
+
+<p><img src="figure/topo.png" alt="topo"/></p>
+
+<h2>Data structure usages</h2>
+
+<p>The following plot shows the structures sizes in pages (usually one page =
+4096 bytes) this information can give a hint on the importance of the
+different data structures and on the possible kind of optimization.</p>
+
+<p><strong>Note:</strong></p>
+
+<ul>
+<li>If all the data structures are named <code>AnonymousStruct#n</code>, you should try to
+recompile your program with the &ldquo;-g&rdquo; option and re run TABARNAC.</li>
+<li>Some structures might be ignored by TABARNAC because of the following
+reasons:
+
+<ol>
+<li>No access have been detected: this happens with structures
+smaller than one page.</li>
+<li>The structure is not used enough: to keep the figures clear, we
+automatically remove the structures responsible for less than 1 one
+access over 10000. This can be cancelled by running <code>tabarnac -C -i -p</code> expname</li>
+</ol></li>
+<li>After ignoring these structures, some threads might not be responsible of any
+access. Such thread will be ignored except if the -i option is used.</li>
+</ul>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ddply&quot;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in show(p): error in evaluating the argument &#39;object&#39; in selecting a method for function &#39;show&#39;: Error: object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Warning in remove(p): object &#39;p&#39; not found
+</code></pre>
+
+<p>The following visualization shows the number of accesses and the ratio
+Read/Write for every data structures. As the previous plot, it helps to
+understand the importance of each structure.</p>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Error in show(p): error in evaluating the argument &#39;object&#39; in selecting a method for function &#39;show&#39;: Error: object &#39;p&#39; not found
+</code></pre>
+
+<pre><code>## Warning in remove(p): object &#39;p&#39; not found
+</code></pre>
+
+<p>The next table tells which structures are not read or written by which thread,
+this information is useful to determine if duplication is a possible solution.</p>
+
+<pre><code>## [1] Struct   Thread   Type     NbAccess
+## &lt;0 rows&gt; (or 0-length row.names)
+</code></pre>
+
+<h2>Access distribution</h2>
+
+<p>The following plots shows for each structure how much each thread access each
+pages.The horizontal ̀<code>Avg</code> lines indicate the average access per pages and
+the vertical the average access per thread.</p>
+
+<ul>
+<li><p>If the memory is correctly accessed, some groups of threads (from 1 to the
+maximum thread per NUMA node of the experimental machine) should appear. A
+group of thread is a set of thread accessing (mostly) the same set of pages.
+Moreover, the Average number of accesses should be more or less the same,
+for every threads and for every pages.</p>
+
+<p>If you can identify groups of threads working on the same part of a
+structure, try to bind them on the same NUMA node, with the part of the
+structure they access.</p></li>
+<li><p>If the average accesses per thread is imbalanced, it means that some
+thread access to much the memory while other don&#39;t. This usually means that
+the work is not correctly balanced between threads.</p></li>
+<li><p>If the average accesses per page is imbalanced, it means that the workload
+is not not uniformly distributed over the structure. If it is not possible
+to distribute the accesses differently, you should at least ensure that there not
+hotspots (pages accessed a lot by every threads). If this is not possible,
+interleaving the structure on the NUMA nodes should still improve the
+performances.</p></li>
+</ul>
+
+<pre><code>## Error: could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Warning in remove(p): object &#39;p&#39; not found
+</code></pre>
+
+<h2>First Touch</h2>
+
+<p>By default, on recent operating systems, when an application runs on a NUMA machine, data are
+mapped according to the first touch policy aka near to the first thread which
+use it. The following plot show the repartition of the first touch over the
+structures.
+The first touch pattern should be similar to the distribution pattern of the
+previous plots. If the plot is a straight line, it means that one thread is
+initializing the whole structure which is generally a source of performance
+issues on NUMA machines, you should try to split the initialization such that each thread is
+responsible for a part or manually distribute the structure on the nodes.</p>
+
+<pre><code>## Error: could not find function &quot;ggplot&quot;
+</code></pre>
+
+<pre><code>## Warning in remove(p): object &#39;p&#39; not found
+</code></pre>
+
+</body>
+
+</html>
