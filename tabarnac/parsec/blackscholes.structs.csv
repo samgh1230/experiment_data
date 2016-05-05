@@ -1,0 +1,8 @@
+name,start,sz
+__GI___pthread_keys,2200352,16384
+__pthread_keys,2200352,16384
+AnonymousStruct0,8065040,5280
+AnonymousStruct1,139947585921040,2359296
+AnonymousStruct2,139947594825744,262144
+AnonymousStruct3,139947584606224,1310976
+AnonymousStruct4,139947594264592,262400
